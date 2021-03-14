@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<style>
+			#menu-bar-container
+			{
+				background-color:#658BFF;
+				height:70px;
+				border-top:1px #cccccc solid;
+			}
+
+			#menu-bar
+			{
+				width:1000px;
+				margin:0 auto;
+			}
+
+			h1
+			{
+				padding:0;
+				margin:0;
+				color:white;
+				font-size:40px;
+				font-weight:normal;
+				font-color:white;
+				padding-top:10px;
+				padding-left:30%;
+			}
+
+			form
+			{
+				padding-top:40px;
+				padding-left:500px;
+			}
+
+			body
+			{
+				background-image: url('bg.jpg');
+				background-size:cover;
+			}
+
+		</style>
+		<title>Login Form</title>
+
+		<script>
+			function RegistrationFunction()
+			{
+				var url=document.userselect.usertype.value;
+				document.location.href=url+"Registration.html";
+			}
+			function LoginFunction()
+			{
+				var url=document.userselect.usertype.value;
+				document.location.href=url+"Login.html";
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="menu-bar-container">
+			<div id="menu-bar"><h1>SEARCH FOR HEALTH CARE</h1></div>
+		</div>
+
+		<form name="userselect" method="post" >
+			<font color="white">User type : </font>
+			<select id="usertype" name="usertype">
+				<option value="Admin_">Admin</option>
+  				<option value="Service_Provider_">Service Provider</option>
+  				<option value="User_">User</option>
+			</select>
+			<br><br>
+			<input type="button" onClick="RegistrationFunction();" value="Sign Up"/>
+			<input type="button" class="st" onClick="LoginFunction();" value="Sign In"/>
+		</form>
+		
+	</body>
+
+</html>
